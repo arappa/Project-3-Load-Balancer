@@ -1,0 +1,82 @@
+\hypertarget{classrequestqueue}{}\doxysection{requestqueue Class Reference}
+\label{classrequestqueue}\index{requestqueue@{requestqueue}}
+
+
+A class representing a queue of requests.  
+
+
+
+
+{\ttfamily \#include $<$requestqueue.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrequestqueue_a04a5c4aa8a5617c98dc6198af63b04a3}\label{classrequestqueue_a04a5c4aa8a5617c98dc6198af63b04a3}} 
+\mbox{\hyperlink{classrequestqueue_a04a5c4aa8a5617c98dc6198af63b04a3}{requestqueue}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty request queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrequestqueue_ab86369e81246a674d9ad12e4ab2756d1}{push\+\_\+request}} (\mbox{\hyperlink{classrequest}{request}} req)
+\begin{DoxyCompactList}\small\item\em Adds a request to the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrequest}{request}} \mbox{\hyperlink{classrequestqueue_aa018c5a938a725b87e89689ddb3c1173}{pop\+\_\+request}} ()
+\begin{DoxyCompactList}\small\item\em Removes and returns the next request from the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrequestqueue_ab542110194a02d1adc27f26885a2aad6}{is\+\_\+empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the queue is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrequestqueue_aff214e0073f358f42436f26033ca6cdb}\label{classrequestqueue_aff214e0073f358f42436f26033ca6cdb}} 
+std\+::queue$<$ \mbox{\hyperlink{classrequest}{request}} $>$ \mbox{\hyperlink{classrequestqueue_aff214e0073f358f42436f26033ca6cdb}{requests}}
+\begin{DoxyCompactList}\small\item\em A queue storing requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a queue of requests. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrequestqueue_ab542110194a02d1adc27f26885a2aad6}\label{classrequestqueue_ab542110194a02d1adc27f26885a2aad6}} 
+\index{requestqueue@{requestqueue}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!requestqueue@{requestqueue}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily bool requestqueue\+::is\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the queue is empty, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrequestqueue_aa018c5a938a725b87e89689ddb3c1173}\label{classrequestqueue_aa018c5a938a725b87e89689ddb3c1173}} 
+\index{requestqueue@{requestqueue}!pop\_request@{pop\_request}}
+\index{pop\_request@{pop\_request}!requestqueue@{requestqueue}}
+\doxysubsubsection{\texorpdfstring{pop\_request()}{pop\_request()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrequest}{request}} requestqueue\+::pop\+\_\+request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes and returns the next request from the queue. 
+
+\begin{DoxyReturn}{Returns}
+The next request in the queue. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrequestqueue_ab86369e81246a674d9ad12e4ab2756d1}\label{classrequestqueue_ab86369e81246a674d9ad12e4ab2756d1}} 
+\index{requestqueue@{requestqueue}!push\_request@{push\_request}}
+\index{push\_request@{push\_request}!requestqueue@{requestqueue}}
+\doxysubsubsection{\texorpdfstring{push\_request()}{push\_request()}}
+{\footnotesize\ttfamily void requestqueue\+::push\+\_\+request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrequest}{request}}}]{req }\end{DoxyParamCaption})}
+
+
+
+Adds a request to the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The request to be added. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/arappa/\+Project-\/3-\/\+Load-\/\+Balancer/requestqueue.\+h\item 
+/home/arappa/\+Project-\/3-\/\+Load-\/\+Balancer/requestqueue.\+cpp\end{DoxyCompactItemize}

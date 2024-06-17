@@ -1,0 +1,81 @@
+\hypertarget{classserver}{}\doxysection{server Class Reference}
+\label{classserver}\index{server@{server}}
+
+
+A class representing a server that handles requests.  
+
+
+
+
+{\ttfamily \#include $<$server.\+h$>$}
+
+
+
+Collaboration diagram for server\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver_ae6a0e44634189d7960398c316b1d66c7}{server}} (std\+::string server\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Constructs a server object with a given name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver_a468fce23de39d2aaab95fc6a927ca090}{handle\+\_\+req}} (\mbox{\hyperlink{classrequest}{request}} \mbox{\hyperlink{classrequest}{request}}, int ts)
+\begin{DoxyCompactList}\small\item\em Handles a request at a given timestamp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver_aebb4b878944b47d82ef2ef7f4755b9d4}\label{classserver_aebb4b878944b47d82ef2ef7f4755b9d4}} 
+std\+::string \mbox{\hyperlink{classserver_aebb4b878944b47d82ef2ef7f4755b9d4}{ID}}
+\begin{DoxyCompactList}\small\item\em The ID of the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver_a99ce18e7cd57c074ba9f447dc175fb36}\label{classserver_a99ce18e7cd57c074ba9f447dc175fb36}} 
+\mbox{\hyperlink{classrequest}{request}} \mbox{\hyperlink{classserver_a99ce18e7cd57c074ba9f447dc175fb36}{curr\+\_\+req}}
+\begin{DoxyCompactList}\small\item\em The current request being handled by the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver_a5d8380094b7a7ef2777742c57b79ea4f}\label{classserver_a5d8380094b7a7ef2777742c57b79ea4f}} 
+int \mbox{\hyperlink{classserver_a5d8380094b7a7ef2777742c57b79ea4f}{curr\+\_\+wait}}
+\begin{DoxyCompactList}\small\item\em The current wait time for the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a server that handles requests. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver_ae6a0e44634189d7960398c316b1d66c7}\label{classserver_ae6a0e44634189d7960398c316b1d66c7}} 
+\index{server@{server}!server@{server}}
+\index{server@{server}!server@{server}}
+\doxysubsubsection{\texorpdfstring{server()}{server()}}
+{\footnotesize\ttfamily server\+::server (\begin{DoxyParamCaption}\item[{std\+::string}]{server\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Constructs a server object with a given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server\+\_\+name} & The name of the server. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver_a468fce23de39d2aaab95fc6a927ca090}\label{classserver_a468fce23de39d2aaab95fc6a927ca090}} 
+\index{server@{server}!handle\_req@{handle\_req}}
+\index{handle\_req@{handle\_req}!server@{server}}
+\doxysubsubsection{\texorpdfstring{handle\_req()}{handle\_req()}}
+{\footnotesize\ttfamily void server\+::handle\+\_\+req (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrequest}{request}}}]{request,  }\item[{int}]{ts }\end{DoxyParamCaption})}
+
+
+
+Handles a request at a given timestamp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request to be handled. \\
+\hline
+{\em ts} & The timestamp at which the request is handled. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/arappa/\+Project-\/3-\/\+Load-\/\+Balancer/server.\+h\item 
+/home/arappa/\+Project-\/3-\/\+Load-\/\+Balancer/server.\+cpp\end{DoxyCompactItemize}

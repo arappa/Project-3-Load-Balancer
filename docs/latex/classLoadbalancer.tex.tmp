@@ -1,0 +1,149 @@
+\hypertarget{classLoadbalancer}{}\doxysection{Loadbalancer Class Reference}
+\label{classLoadbalancer}\index{Loadbalancer@{Loadbalancer}}
+
+
+A class representing a load balancer for managing server requests.  
+
+
+
+
+{\ttfamily \#include $<$loadbalancer.\+h$>$}
+
+
+
+Collaboration diagram for Loadbalancer\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLoadbalancer_acab4f8e6da3ba1339523fc7471f19374}{Loadbalancer}} (int running\+\_\+time, int \mbox{\hyperlink{classLoadbalancer_ad4690ca8781a3e83e960e74195b1406e}{servers}}, int \mbox{\hyperlink{classLoadbalancer_a50623b658e90bdb8cafae1771cd3fe9a}{init\+\_\+req}})
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classLoadbalancer}{Loadbalancer}} object. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classserver}{server}} $>$ \mbox{\hyperlink{classLoadbalancer_a3806c20c2714b023089e3dc368670056}{start\+\_\+webservers}} ()
+\begin{DoxyCompactList}\small\item\em Starts the web servers and returns them as a vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrequestqueue}{requestqueue}} \mbox{\hyperlink{classLoadbalancer_a4a12bddec14f68b20e32adb3fc62845c}{fill\+\_\+requests}} ()
+\begin{DoxyCompactList}\small\item\em Fills the request queue and returns it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_aa33a6d32e9bc61c924b50ebf1776f396}\label{classLoadbalancer_aa33a6d32e9bc61c924b50ebf1776f396}} 
+void \mbox{\hyperlink{classLoadbalancer_aa33a6d32e9bc61c924b50ebf1776f396}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the load balancer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_ad5d7061931b12fb6404c528f39b6af20}\label{classLoadbalancer_ad5d7061931b12fb6404c528f39b6af20}} 
+void \mbox{\hyperlink{classLoadbalancer_ad5d7061931b12fb6404c528f39b6af20}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs the load balancer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_a6bba73d40295c671ab8e16971f602374}\label{classLoadbalancer_a6bba73d40295c671ab8e16971f602374}} 
+void \mbox{\hyperlink{classLoadbalancer_a6bba73d40295c671ab8e16971f602374}{assign\+\_\+request}} ()
+\begin{DoxyCompactList}\small\item\em Assigns requests to available servers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_aa64af5272d451b449a24ef390bf3ee52}\label{classLoadbalancer_aa64af5272d451b449a24ef390bf3ee52}} 
+void \mbox{\hyperlink{classLoadbalancer_aa64af5272d451b449a24ef390bf3ee52}{server\+\_\+sweep}} ()
+\begin{DoxyCompactList}\small\item\em Performs a sweep of the servers to check their status. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLoadbalancer_a0210fb42c15b955346b03cbf2d038879}{is\+\_\+ip\+\_\+blocked}} (const std\+::string \&ip)
+\begin{DoxyCompactList}\small\item\em Checks if an IP address is blocked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLoadbalancer_aa8f7fbd1a2c404ac956bcec4bdc0587d}\label{classLoadbalancer_aa8f7fbd1a2c404ac956bcec4bdc0587d}} 
+int \mbox{\hyperlink{classLoadbalancer_aa8f7fbd1a2c404ac956bcec4bdc0587d}{runtime}}
+\begin{DoxyCompactList}\small\item\em The runtime for the load balancer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_ad4690ca8781a3e83e960e74195b1406e}\label{classLoadbalancer_ad4690ca8781a3e83e960e74195b1406e}} 
+int \mbox{\hyperlink{classLoadbalancer_ad4690ca8781a3e83e960e74195b1406e}{servers}}
+\begin{DoxyCompactList}\small\item\em The number of servers managed by the load balancer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_a50623b658e90bdb8cafae1771cd3fe9a}\label{classLoadbalancer_a50623b658e90bdb8cafae1771cd3fe9a}} 
+int \mbox{\hyperlink{classLoadbalancer_a50623b658e90bdb8cafae1771cd3fe9a}{init\+\_\+req}}
+\begin{DoxyCompactList}\small\item\em The initial number of requests. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_abd079270875e5ca9585c696879a13782}\label{classLoadbalancer_abd079270875e5ca9585c696879a13782}} 
+int \mbox{\hyperlink{classLoadbalancer_abd079270875e5ca9585c696879a13782}{cycle}}
+\begin{DoxyCompactList}\small\item\em The current cycle of the load balancer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_a1339586981430171864ecdbd7fb235d1}\label{classLoadbalancer_a1339586981430171864ecdbd7fb235d1}} 
+\mbox{\hyperlink{classrequestqueue}{requestqueue}} \mbox{\hyperlink{classLoadbalancer_a1339586981430171864ecdbd7fb235d1}{requests}}
+\begin{DoxyCompactList}\small\item\em The queue of requests to be handled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_a293aaa67c46cfc50ed88173d2ff1f19a}\label{classLoadbalancer_a293aaa67c46cfc50ed88173d2ff1f19a}} 
+std\+::queue$<$ \mbox{\hyperlink{classserver}{server}} $>$ \mbox{\hyperlink{classLoadbalancer_a293aaa67c46cfc50ed88173d2ff1f19a}{empty\+\_\+servers}}
+\begin{DoxyCompactList}\small\item\em A queue of empty servers available to handle requests. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_a03fd1be43e9ba4d3541045f90de7bc2d}\label{classLoadbalancer_a03fd1be43e9ba4d3541045f90de7bc2d}} 
+std\+::vector$<$ \mbox{\hyperlink{classserver}{server}} $>$ \mbox{\hyperlink{classLoadbalancer_a03fd1be43e9ba4d3541045f90de7bc2d}{web\+\_\+servers}}
+\begin{DoxyCompactList}\small\item\em A vector of all web servers managed by the load balancer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_a06f47094052a9eb6074767428810f848}\label{classLoadbalancer_a06f47094052a9eb6074767428810f848}} 
+std\+::vector$<$ \mbox{\hyperlink{classserver}{server}} $>$ \mbox{\hyperlink{classLoadbalancer_a06f47094052a9eb6074767428810f848}{handled\+\_\+ser}}
+\begin{DoxyCompactList}\small\item\em A vector of servers that have handled requests. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_a5ff161d2cf5e96362d104a56c10ecf0b}\label{classLoadbalancer_a5ff161d2cf5e96362d104a56c10ecf0b}} 
+std\+::vector$<$ \mbox{\hyperlink{classrequest}{request}} $>$ \mbox{\hyperlink{classLoadbalancer_a5ff161d2cf5e96362d104a56c10ecf0b}{handled\+\_\+req}}
+\begin{DoxyCompactList}\small\item\em A vector of requests that have been handled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadbalancer_a4efe972a51f7452e6260de40ecbef2f8}\label{classLoadbalancer_a4efe972a51f7452e6260de40ecbef2f8}} 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classLoadbalancer_a4efe972a51f7452e6260de40ecbef2f8}{handled\+\_\+times}}
+\begin{DoxyCompactList}\small\item\em A vector of times when requests were handled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a load balancer for managing server requests. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLoadbalancer_acab4f8e6da3ba1339523fc7471f19374}\label{classLoadbalancer_acab4f8e6da3ba1339523fc7471f19374}} 
+\index{Loadbalancer@{Loadbalancer}!Loadbalancer@{Loadbalancer}}
+\index{Loadbalancer@{Loadbalancer}!Loadbalancer@{Loadbalancer}}
+\doxysubsubsection{\texorpdfstring{Loadbalancer()}{Loadbalancer()}}
+{\footnotesize\ttfamily Loadbalancer\+::\+Loadbalancer (\begin{DoxyParamCaption}\item[{int}]{running\+\_\+time,  }\item[{int}]{servers,  }\item[{int}]{init\+\_\+req }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classLoadbalancer}{Loadbalancer}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em running\+\_\+time} & The running time for the load balancer. \\
+\hline
+{\em servers} & The number of servers managed by the load balancer. \\
+\hline
+{\em init\+\_\+req} & The initial number of requests. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLoadbalancer_a4a12bddec14f68b20e32adb3fc62845c}\label{classLoadbalancer_a4a12bddec14f68b20e32adb3fc62845c}} 
+\index{Loadbalancer@{Loadbalancer}!fill\_requests@{fill\_requests}}
+\index{fill\_requests@{fill\_requests}!Loadbalancer@{Loadbalancer}}
+\doxysubsubsection{\texorpdfstring{fill\_requests()}{fill\_requests()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrequestqueue}{requestqueue}} Loadbalancer\+::fill\+\_\+requests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fills the request queue and returns it. 
+
+\begin{DoxyReturn}{Returns}
+A filled request queue. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLoadbalancer_a0210fb42c15b955346b03cbf2d038879}\label{classLoadbalancer_a0210fb42c15b955346b03cbf2d038879}} 
+\index{Loadbalancer@{Loadbalancer}!is\_ip\_blocked@{is\_ip\_blocked}}
+\index{is\_ip\_blocked@{is\_ip\_blocked}!Loadbalancer@{Loadbalancer}}
+\doxysubsubsection{\texorpdfstring{is\_ip\_blocked()}{is\_ip\_blocked()}}
+{\footnotesize\ttfamily bool Loadbalancer\+::is\+\_\+ip\+\_\+blocked (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ip }\end{DoxyParamCaption})}
+
+
+
+Checks if an IP address is blocked. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & The IP address to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the IP is blocked, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLoadbalancer_a3806c20c2714b023089e3dc368670056}\label{classLoadbalancer_a3806c20c2714b023089e3dc368670056}} 
+\index{Loadbalancer@{Loadbalancer}!start\_webservers@{start\_webservers}}
+\index{start\_webservers@{start\_webservers}!Loadbalancer@{Loadbalancer}}
+\doxysubsubsection{\texorpdfstring{start\_webservers()}{start\_webservers()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classserver}{server}} $>$ Loadbalancer\+::start\+\_\+webservers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the web servers and returns them as a vector. 
+
+\begin{DoxyReturn}{Returns}
+A vector of started web servers. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/arappa/\+Project-\/3-\/\+Load-\/\+Balancer/loadbalancer.\+h\item 
+/home/arappa/\+Project-\/3-\/\+Load-\/\+Balancer/loadbalancer.\+cpp\end{DoxyCompactItemize}
