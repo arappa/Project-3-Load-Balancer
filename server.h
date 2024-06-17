@@ -5,14 +5,13 @@
 #include <string>
 #include "request.h"
 
-class Server{
+class server {
     public:
-        Server::server(string serverName);
-        request cur_req;
-        string ID;
-        int wait;
-
-        void handle_req(request request, int time);
-}
+        server(std::string server_name);
+        std::string ID;
+        request curr_req;
+        int curr_wait;
+        void handle_req(request request, int ts);
+};
 
 #endif //SERVER_H
